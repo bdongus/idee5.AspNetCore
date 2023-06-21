@@ -1,4 +1,5 @@
 using idee5.AspNetCore;
+using idee5.Common;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ var assembly = Assembly.GetExecutingAssembly();
 services.AddControllers().AddCQRSHandlers(assembly, assembly);
 services.RegisterQueryHandlers();
 services.RegisterCommandHandlers();
+services.AddHttpContextAccessor();
+builder.Services.AddSingleton<ICurrentUserIdProvider, HttpContextCurrentUserProvider>();
 services.AddAuthorization(o => {
     o.AddPolicy("CommandPolicy", p => p.RequireAssertion(_ => true));
     o.AddPolicy("QueryPolicy", p => p.RequireAssertion(_ => true));

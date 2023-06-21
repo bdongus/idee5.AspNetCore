@@ -1,6 +1,6 @@
 ﻿using idee5.Common;
 
-namespace idee5.AspNetCore.TestApi; 
+namespace idee5.AspNetCore.TestApi;
 public class HelloQuery : IQuery<string> {
     public string Name { get; set; }
 }

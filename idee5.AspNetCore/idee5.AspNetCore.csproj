@@ -13,7 +13,8 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="idee5.Common" Version="3.4.1" />
+    <PackageReference Include="idee5.Common" Version="3.4.2" />
+    <PackageReference Include="idee5.Common.Data" Version="1.7.1" />
     <PackageReference Include="MinVer" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

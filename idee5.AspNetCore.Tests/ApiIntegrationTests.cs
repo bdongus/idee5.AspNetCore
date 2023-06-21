@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Net.Mime;
 using System.Text;
+using Xunit;
 
 // https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0
 namespace idee5.AspNetCore.Tests {
@@ -44,12 +45,26 @@ namespace idee5.AspNetCore.Tests {
             var client = _factory.CreateClient();
 
             // Act
-            var response = await client.GetAsync("/api/query/Hello?Name=idee5");
+            var response = await client.GetAsync("/api/query/Hello?Name=idee5").ConfigureAwait(false);
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
             var result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             Assert.Equal("Hello idee5", result);
+        }
+
+        [Fact]
+        public async void CanGetAnonymousUser() {
+            // Arrange
+            var client = _factory.CreateClient();
+
+            // Act
+            var response = await client.GetAsync("/api/query/User").ConfigureAwait(false);
+
+            // Assert
+            response.EnsureSuccessStatusCode(); // Status Code 200-299
+            var result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            Assert.Equal("anonymous", result);
         }
     }
 }
