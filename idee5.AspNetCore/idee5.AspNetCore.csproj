@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -13,6 +13,9 @@
     <PackageIcon>idee5 nuget icon.png</PackageIcon>
     <PackageTags>idee5;ASP.NET Core</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>$(MinVerVersion)</Version>
+    <AssemblyVersion>$(MinVerMajor).0.0.0</AssemblyVersion>
+    <FileVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch).0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
