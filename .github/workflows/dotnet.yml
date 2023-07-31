@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: idee5.AspNetCore
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
