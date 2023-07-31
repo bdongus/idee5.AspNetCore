@@ -6,15 +6,26 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <Authors>idee5</Authors>
-    <Copyright>2023 idee5</Copyright>
+    <Copyright>(c) 2023 idee5</Copyright>
     <Description>ASP.NET Core additions for commands, queries, ... from the idee5.Common package.</Description>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/bdongus/idee5.AspNetCore</RepositoryUrl>
+    <PackageIcon>idee5 nuget icon.png</PackageIcon>
+    <PackageTags>idee5;ASP.NET Core</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="idee5.Common" Version="3.4.2" />
-    <PackageReference Include="idee5.Common.Data" Version="1.7.1" />
+    <None Include="..\idee5 nuget icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="idee5.Common" Version="3.5.0" />
+    <PackageReference Include="idee5.Common.Data" Version="1.8.0" />
     <PackageReference Include="MinVer" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
