@@ -20,7 +20,7 @@ public class QueryControllerProvider : IApplicationFeatureProvider<ControllerFea
 
     /// <inheritdoc/>
     public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature) {
-        if (feature == null) throw new ArgumentNullException(nameof(feature));
+        ArgumentNullException.ThrowIfNull(feature);
         feature.AddAsyncQueryControllers(assembly);
     }
 }

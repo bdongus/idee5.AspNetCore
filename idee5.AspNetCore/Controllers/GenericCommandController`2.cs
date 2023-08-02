@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace idee5.AspNetCore;
+namespace idee5.AspNetCore.Controllers;
 /// <summary>
 /// Web Api wrapper controller around a <see cref="ICommandHandlerAsync{TCommand}"/>.
 /// </summary>
@@ -13,7 +13,7 @@ namespace idee5.AspNetCore;
 [Authorize(Policy = "CommandPolicy")]
 public class GenericCommandController<TCommandHandler, TCommand> : ControllerBase
         where TCommandHandler : class, ICommandHandlerAsync<TCommand> {
-        private readonly TCommandHandler _commandHandler;
+    private readonly TCommandHandler _commandHandler;
 
     /// <summary>
     /// Initialize the wrapper controller.

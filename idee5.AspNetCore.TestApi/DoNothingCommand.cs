@@ -8,4 +8,15 @@ namespace idee5.AspNetCore.TestApi {
             return Task.CompletedTask;
         }
     }
+    public class DoNothingCommandDecoratorHandler : ICommandHandlerAsync<DoNothingCommand> {
+        private readonly ICommandHandlerAsync<DoNothingCommand> decoratee;
+
+        public DoNothingCommandDecoratorHandler(ICommandHandlerAsync<DoNothingCommand> decoratee) {
+            this.decoratee = decoratee;
+        }
+
+        public Task HandleAsync(DoNothingCommand command, CancellationToken cancellationToken = default) {
+            return decoratee.HandleAsync(command, cancellationToken);
+        }
+    }
 }

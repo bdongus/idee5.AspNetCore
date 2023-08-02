@@ -3,7 +3,7 @@
 namespace idee5.AspNetCore.TestApi;
 
 public class UserQuery : IQuery<string> {
-    public bool Useless { get; set; }
+    public string Name { get; set; } = "";
 }
 public class UserQueryHandler : IQueryHandlerAsync<UserQuery, string> {
     private readonly ICurrentUserIdProvider currentUserIdProvider;
