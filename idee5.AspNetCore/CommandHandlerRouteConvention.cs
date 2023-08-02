@@ -10,10 +10,10 @@ public class CommandHandlerRouteConvention : IControllerModelConvention {
 
     /// <inheritdoc/>
     public void Apply(ControllerModel controller) {
-        if (controller == null) throw new ArgumentNullException(nameof(controller));
+        ArgumentNullException.ThrowIfNull(controller);
 
         // Only handle generic commands from the web api namespace
-        if (controller.ControllerType.IsGenericType && controller.ControllerType.Namespace == "idee5.AspNetCore") {
+        if (controller.ControllerType.IsGenericType) {
             string parameterName = controller.ControllerType.GenericTypeArguments[1].Name;
             if (parameterName.EndsWith(suffix, StringComparison.Ordinal)) {
                 // The second type parameter is a command parameter, set the controller name

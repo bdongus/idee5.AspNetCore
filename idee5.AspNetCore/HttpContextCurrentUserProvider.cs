@@ -1,7 +1,7 @@
 ﻿using idee5.Common;
 using Microsoft.AspNetCore.Http;
 
-namespace idee5.AspNetCore; 
+namespace idee5.AspNetCore;
 /// <summary>
 /// The http context current user provider.
 /// </summary>

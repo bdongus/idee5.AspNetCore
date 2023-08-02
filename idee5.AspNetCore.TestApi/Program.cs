@@ -11,7 +11,7 @@ services.AddControllers().AddCQRSHandlers(assembly, assembly);
 services.RegisterQueryHandlers();
 services.RegisterCommandHandlers();
 services.AddHttpContextAccessor();
-builder.Services.AddSingleton<ICurrentUserIdProvider, HttpContextCurrentUserProvider>();
+services.AddSingleton<ICurrentUserIdProvider, HttpContextCurrentUserProvider>();
 services.AddAuthorization(o => {
     o.AddPolicy("CommandPolicy", p => p.RequireAssertion(_ => true));
     o.AddPolicy("QueryPolicy", p => p.RequireAssertion(_ => true));
@@ -19,7 +19,7 @@ services.AddAuthorization(o => {
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
+app.MapRouteDump("/debug/routes");
 app.UseAuthorization();
 
 app.MapControllers();

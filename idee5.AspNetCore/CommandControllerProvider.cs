@@ -8,20 +8,18 @@ namespace idee5.AspNetCore;
 /// Add the generic controller types to the available controllers.
 /// </summary>
 public class CommandControllerProvider : IApplicationFeatureProvider<ControllerFeature> {
-    private readonly Assembly assembly;
+    private readonly Assembly _assembly;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="CommandControllerProvider"/> class.
     /// </summary>
     /// <param name="assembly">The assembly containing the commands.</param>
     public CommandControllerProvider(Assembly assembly) {
-        this.assembly = assembly;
+        this._assembly = assembly;
     }
     /// <inheritdoc/>
     public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature) {
-        if (feature == null)
-            throw new ArgumentNullException(nameof(feature));
-        feature.AddAsyncCommandControllers(assembly);
+        ArgumentNullException.ThrowIfNull(feature);
+        feature.AddAsyncCommandControllers(_assembly);
     }
-
 }

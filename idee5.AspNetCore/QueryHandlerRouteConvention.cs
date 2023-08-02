@@ -3,17 +3,17 @@
 namespace idee5.AspNetCore;
 
 /// <summary>
-/// Replace the generic controller names with meaningful names.
+/// Replace the generic query controller names with meaningful names.
 /// </summary>
 public class QueryHandlerRouteConvention : IControllerModelConvention {
     private const string suffix = "Query";
 
     /// <inheritdoc/>
     public void Apply(ControllerModel controller) {
-        if (controller == null) throw new ArgumentNullException(nameof(controller));
+        ArgumentNullException.ThrowIfNull(controller);
 
         // Only handle generic queries from the web api namespace
-        if (controller.ControllerType.IsGenericType && controller.ControllerType.Namespace == "idee5.AspNetCore") {
+        if (controller.ControllerType.IsGenericType) {
             string parameterName = controller.ControllerType.GenericTypeArguments[1].Name;
             if (parameterName.EndsWith(suffix, StringComparison.Ordinal)) {
                 // The second type parameter is a query parameter, set the controller name
