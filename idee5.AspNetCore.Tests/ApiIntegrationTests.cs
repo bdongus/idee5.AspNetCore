@@ -18,7 +18,7 @@ namespace idee5.AspNetCore.Tests {
             HttpClient client = _factory.CreateClient();
 
             // Act
-            HttpResponseMessage response = await client.GetAsync("/api/command/donothingdecorator").ConfigureAwait(false);
+            HttpResponseMessage response = await client.GetAsync("/api/command/donothingdecorator");
 
             // Assert
             Assert.False(response.IsSuccessStatusCode);
@@ -32,7 +32,7 @@ namespace idee5.AspNetCore.Tests {
             HttpClient client = _factory.CreateClient();
 
             // Act
-            HttpResponseMessage response = await client.GetAsync(url).ConfigureAwait(false);
+            HttpResponseMessage response = await client.GetAsync(url);
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
@@ -44,7 +44,7 @@ namespace idee5.AspNetCore.Tests {
             // Arrange
             HttpClient client = _factory.CreateClient();
             // Act
-            HttpResponseMessage response = await client.PostAsync(url, new StringContent("{}", Encoding.UTF8, MediaTypeNames.Application.Json)).ConfigureAwait(false);
+            HttpResponseMessage response = await client.PostAsync(url, new StringContent("{}", Encoding.UTF8, MediaTypeNames.Application.Json));
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
@@ -56,11 +56,11 @@ namespace idee5.AspNetCore.Tests {
             HttpClient client = _factory.CreateClient();
 
             // Act
-            HttpResponseMessage response = await client.GetAsync("/api/query/Hello?Name=idee5").ConfigureAwait(false);
+            HttpResponseMessage response = await client.GetAsync("/api/query/Hello?Name=idee5");
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
-            string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            string result = await response.Content.ReadAsStringAsync();
             Assert.Equal("Hello idee5", result);
         }
 
@@ -70,11 +70,11 @@ namespace idee5.AspNetCore.Tests {
             HttpClient client = _factory.CreateClient();
 
             // Act
-            HttpResponseMessage response = await client.GetAsync("/api/query/User?name=xyc").ConfigureAwait(false);
+            HttpResponseMessage response = await client.GetAsync("/api/query/User?name=xyc");
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
-            string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            string result = await response.Content.ReadAsStringAsync();
             Assert.Equal("anonymous", result);
         }
 
@@ -84,11 +84,11 @@ namespace idee5.AspNetCore.Tests {
             HttpClient client = _factory.CreateClient();
 
             // Act
-            HttpResponseMessage response = await client.GetAsync("/debug/routes").ConfigureAwait(false);
+            HttpResponseMessage response = await client.GetAsync("/debug/routes");
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
-            string routes = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            string routes = await response.Content.ReadAsStringAsync();
             Assert.NotEqual(0, routes.Length);
             Assert.Equal(5, routes.CountLines());
         }
