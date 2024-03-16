@@ -5,3 +5,5 @@ Initial release
 * Use GetImplementationsWithoutDecorators from idee5.Common
 * MapRouteDump added
 * .NET8
+## 1.1.1
+* Moved handler registration to idee5.Common.Data

@@ -6,16 +6,14 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <Authors>idee5</Authors>
-    <Copyright>(c) 2023 idee5</Copyright>
+    <Copyright>(c) 2024 idee5</Copyright>
     <Description>ASP.NET Core additions for commands, queries, ... from the idee5.Common package.</Description>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/bdongus/idee5.AspNetCore</RepositoryUrl>
     <PackageIcon>idee5 nuget icon.png</PackageIcon>
     <PackageTags>idee5;ASP.NET Core</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.1</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
@@ -33,7 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="idee5.Common" Version="4.0.0" />
-    <PackageReference Include="idee5.Common.Data" Version="1.10.0" />
+    <PackageReference Include="idee5.Common.Data" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

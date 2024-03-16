@@ -14,6 +14,7 @@ namespace idee5.AspNetCore.Tests {
 
         [Fact]
         public async Task CanDetectDecorators() {
+            // TODO: Move test to idee5.Common.Data
             // Arrange
             HttpClient client = _factory.CreateClient();
 

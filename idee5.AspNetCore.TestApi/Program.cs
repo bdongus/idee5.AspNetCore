@@ -1,5 +1,7 @@
 using idee5.AspNetCore;
 using idee5.Common;
+using idee5.Common.Data;
+
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +14,9 @@ services.RegisterQueryHandlers();
 services.RegisterCommandHandlers();
 services.AddHttpContextAccessor();
 services.AddSingleton<ICurrentUserIdProvider, HttpContextCurrentUserProvider>();
-services.AddAuthorization(o => {
-    o.AddPolicy("CommandPolicy", p => p.RequireAssertion(_ => true));
-    o.AddPolicy("QueryPolicy", p => p.RequireAssertion(_ => true));
-});
+services.AddAuthorizationBuilder()
+    .AddPolicy("CommandPolicy", p => p.RequireAssertion(_ => true))
+    .AddPolicy("QueryPolicy", p => p.RequireAssertion(_ => true));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
