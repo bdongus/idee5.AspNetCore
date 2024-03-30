@@ -7,3 +7,5 @@ Initial release
 * .NET8
 ## 1.1.1
 * Moved handler registration to idee5.Common.Data
+## 1.1.2
+* HTTP methods added to route dump

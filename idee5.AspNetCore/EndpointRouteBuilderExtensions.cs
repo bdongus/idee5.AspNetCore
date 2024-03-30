@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using idee5.Common;
+
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Routing;
 
@@ -13,6 +15,6 @@ public static class EndpointRouteBuilderExtensions {
     public static IEndpointConventionBuilder MapRouteDump(this IEndpointRouteBuilder builder, string dumpRoute) {
         return builder.MapGet(dumpRoute, (IEnumerable<EndpointDataSource> endpointSources) =>
             string.Join("\n", endpointSources.SelectMany(source => source.Endpoints.OfType<RouteEndpoint>().Select(ep =>
-            $"{ep.RoutePattern.RawText}: {ep.Metadata.GetMetadata<ControllerActionDescriptor>()?.DisplayName ?? ep.DisplayName}"))));
+            $"[{ep.Metadata.OfType<HttpMethodMetadata>().FirstOrDefault()?.HttpMethods.JoinAsString(", ")}] {ep.RoutePattern.RawText}: {ep.Metadata.GetMetadata<ControllerActionDescriptor>()?.DisplayName ?? ep.DisplayName}"))));
     }
 }
