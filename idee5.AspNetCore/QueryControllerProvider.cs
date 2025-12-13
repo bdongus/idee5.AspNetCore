@@ -8,19 +8,19 @@ namespace idee5.AspNetCore;
 /// Add the generic controller types to the available controllers.
 /// </summary>
 public class QueryControllerProvider : IApplicationFeatureProvider<ControllerFeature> {
-    private readonly Assembly assembly;
+    private readonly Assembly _assembly;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="QueryControllerProvider"/> class.
     /// </summary>
     /// <param name="assembly">The assembly containing the queries.</param>
     public QueryControllerProvider(Assembly assembly) {
-        this.assembly = assembly;
+        _assembly = assembly;
     }
 
     /// <inheritdoc/>
     public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature) {
         ArgumentNullException.ThrowIfNull(feature);
-        feature.AddAsyncQueryControllers(assembly);
+        feature.AddAsyncQueryControllers(_assembly);
     }
 }
