@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
@@ -30,8 +30,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="idee5.Common" Version="4.0.0" />
-    <PackageReference Include="idee5.Common.Data" Version="2.1.1" />
+    <PackageReference Include="idee5.Common" Version="5.0.0" />
+    <PackageReference Include="idee5.Common.Data" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
