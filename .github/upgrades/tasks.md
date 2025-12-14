@@ -4,7 +4,7 @@
 
 This document tracks the execution of the atomic All-At-Once upgrade of the solution's three projects from `net8.0` to `net10.0`. Prerequisites, the atomic upgrade, test validation, and the final commit are executed as separate, automatable tasks per the plan.
 
-**Progress**: 3/4 tasks complete (75%) ![0%](https://progress-bar.xyz/75)
+**Progress**: 4/4 tasks complete (100%) ![0%](https://progress-bar.xyz/100)
 
 ---
 
@@ -36,10 +36,11 @@ This document tracks the execution of the atomic All-At-Once upgrade of the solu
 - [✓] (3) Re-run tests after fixes
 - [✓] (4) All tests pass with 0 failures (**Verify**)
 
-### [ ] TASK-004: Final commit
+### [✓] TASK-004: Final commit *(Completed: 2025-12-13 19:31)*
 **References**: Plan §10 Source Control Strategy
 
-- [ ] (1) Commit all changes with message: "TASK-004: Complete upgrade to net10.0"
+- [✓] (1) Commit all changes with message: "TASK-004: Complete upgrade to net10.0"
+
 
 
 
