@@ -9,3 +9,7 @@ Initial release
 * Moved handler registration to idee5.Common.Data
 ## 1.1.2
 * HTTP methods added to route dump
+## 2.0.0
+* Dropped .NET6 support
+* Updated dependencies
+* Upgraded to .NET 10

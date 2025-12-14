@@ -66,7 +66,7 @@ namespace idee5.AspNetCore.Tests {
         }
 
         [Fact]
-        public async void CanGetAnonymousUser() {
+        public async Task CanGetAnonymousUser() {
             // Arrange
             HttpClient client = _factory.CreateClient();
 
@@ -80,7 +80,7 @@ namespace idee5.AspNetCore.Tests {
         }
 
         [Fact]
-        public async void CanGetRoutes() {
+        public async Task CanGetRoutes() {
             // Arrange
             HttpClient client = _factory.CreateClient();
 

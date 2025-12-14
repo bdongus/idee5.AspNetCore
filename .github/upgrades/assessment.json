@@ -1,0 +1,244 @@
+{
+  "settings": {
+    "components": {
+      "code": false,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2025-12-13T18:56:17.5617778Z",
+  "analysisEndTime": "2025-12-13T18:56:20.1099902Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 3,
+      "issues": 2,
+      "incidents": 4,
+      "effort": 4
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 3,
+        "Optional": 0,
+        "Potential": 1,
+        "Information": 0
+      },
+      "category": {
+        "Project": 3,
+        "NuGet": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "idee5.AspNetCore.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "idee5.AspNetCore",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 13,
+        "numberOfCodeFiles": 12,
+        "linesTotal": 590,
+        "linesOfCode": 455,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4f50903f-5bc2-4af6-ae58-3782c31bdb67",
+          "ruleId": "Project.0002",
+          "projectPath": "idee5.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+              "protected": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0"
+            },
+            "kind": "File",
+            "path": "idee5.AspNetCore.csproj",
+            "snippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "protectedSnippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.TestApi\\idee5.AspNetCore.TestApi.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "idee5.AspNetCore.TestApi",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 8,
+        "numberOfCodeFiles": 6,
+        "linesTotal": 141,
+        "linesOfCode": 124,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "07ee34a3-6ed4-4b40-bcfd-677bdd5441f6",
+          "ruleId": "Project.0002",
+          "projectPath": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.TestApi\\idee5.AspNetCore.TestApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+              "protected": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0"
+            },
+            "kind": "File",
+            "path": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.TestApi\\idee5.AspNetCore.TestApi.csproj",
+            "snippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "protectedSnippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.Tests\\idee5.AspNetCore.Tests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "idee5.AspNetCore.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 1867,
+        "linesOfCode": 98,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "c730ef90-50da-4597-80ac-fecd96d59400",
+          "ruleId": "NuGet.0002",
+          "projectPath": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.Tests\\idee5.AspNetCore.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Testing, 8.0.3\n\nEmpfehlung:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.1",
+              "protected": "Microsoft.AspNetCore.Mvc.Testing, 8.0.3\n\nEmpfehlung:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.1"
+            },
+            "kind": "File",
+            "path": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.Tests\\idee5.AspNetCore.Tests.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.3\n\nEmpfehlung:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.1",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.3\n\nEmpfehlung:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.1",
+            "label": "Microsoft.AspNetCore.Mvc.Testing 8.0.3",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Testing",
+              "PackageVersion": "8.0.3",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d41f3586-9423-4bd8-af00-267245f4bd9c",
+          "ruleId": "Project.0002",
+          "projectPath": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.Tests\\idee5.AspNetCore.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+              "protected": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0"
+            },
+            "kind": "File",
+            "path": "%USERPROFILE%\\source\\repos\\idee5.AspNetCore\\idee5.AspNetCore.Tests\\idee5.AspNetCore.Tests.csproj",
+            "snippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "protectedSnippet": "Aktuelles Zielframework: net8.0\nEmpfohlenes Zielframework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Die Zielframeworks des Projekts m\u00FCssen in das neue Zielframework ge\u00E4ndert werden, das Sie f\u00FCr dieses Upgrade ausgew\u00E4hlt haben.\n\nW\u00E4hrend des Upgrades wird das Zielframework an die entsprechende Plattform angepasst, falls zutreffend. In einigen F\u00E4llen, f\u00FChrte das Upgrade des Projekts zu mehreren Zielframeworks, wenn es Features verwendete, die jetzt \u00FCber eigene Plattformen in modernen .NET-Frameworks (Windows, iOS, Android usw.) verf\u00FCgen.",
+      "label": "Die Zielframeworks des Projekts m\u00FCssen ge\u00E4ndert werden",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u00DCbersicht \u00FCber das Portieren von .NET\u00A0Framework zu .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET-Projekt-SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "F\u00FCr das ausgew\u00E4hlte Zielframework wird ein NuGet-Paketupgrade empfohlen.\n\nStandardm\u00E4\u00DFige .NET-Pakete werden empfohlen, um Versionen zu verwenden, die der Version von .NET entsprechen, auf die das Projekt abzielt.\n\nAuch einige andere Pakete funktionieren f\u00FCr die ausgew\u00E4hlten Zielframeworks bekanntlich besser.",
+      "label": "Ein NuGet-Paketupgrade wird empfohlen",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

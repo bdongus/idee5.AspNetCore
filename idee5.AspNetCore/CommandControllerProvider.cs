@@ -15,7 +15,7 @@ public class CommandControllerProvider : IApplicationFeatureProvider<ControllerF
     /// </summary>
     /// <param name="assembly">The assembly containing the commands.</param>
     public CommandControllerProvider(Assembly assembly) {
-        this._assembly = assembly;
+        _assembly = assembly;
     }
     /// <inheritdoc/>
     public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature) {
